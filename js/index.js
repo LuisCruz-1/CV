@@ -1,31 +1,29 @@
-// Get all sections that have an ID defined
+// Obtener todas las secciones que tienen un ID definido
 const sections = document.querySelectorAll("section[id]");
 
-// Add an event listener listening for scroll
+// Agregar un escuchador de eventos para el desplazamiento
 window.addEventListener("scroll", navHighlighter);
-
 function navHighlighter() {
   
-  // Get current scroll position
+  // Obtener la posición actual de desplazamiento
   let scrollY = window.pageYOffset;
   
-  // Now we loop through sections to get height, top and ID values for each
+  // Ahora recorremos las secciones para obtener la altura, la parte superior y los valores de ID para cada una
   sections.forEach(current => {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 50;
-    sectionId = current.getAttribute("id");
-    
+    sectionId = current.getAttribute("id");    
     /*
-    - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
-    - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+    - Si nuestra posición actual de desplazamiento entra en el espacio donde se encuentra la sección actual en pantalla, agregue la clase .active al enlace de navegación correspondiente, de lo contrario, elimínela
+    - Para saber qué enlace necesita una clase activa, usamos la variable sectionId que estamos obteniendo mientras recorremos las secciones como un selector
     */
     if (
       scrollY > sectionTop &&
       scrollY <= sectionTop + sectionHeight
     ){
-      document.querySelector(".verticalmenu a[href*=" + sectionId + "]").classList.add("active");
+      document.querySelector(".verticalmenu a[href*='" + sectionId + "']").classList.add("active");
     } else {
-      document.querySelector(".verticalmenu a[href*=" + sectionId + "]").classList.remove("active");
+      document.querySelector(".verticalmenu a[href*='" + sectionId + "']").classList.remove("active");
     }
   });
 }
