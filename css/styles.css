@@ -15,8 +15,21 @@ body{
         z-index: 1;
     }
     .navbar{
-        position: fixed!important;
-        z-index: 1;
+        overflow: hidden;
+        width: 320px!important;
+        padding: 50px 15px!important;
+    }
+    .navbar .verticalmenu li{
+        padding-top: 14px!important;
+        padding-bottom: 14px!important;
+    }
+    .navbar .verticalmenu li i{
+        padding-bottom: 5px;
+    }
+    .navbar .verticalmenu li a{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3px;
     }
     .fila{
         flex-direction: column!important;
@@ -66,7 +79,7 @@ body{
     display: none;
   }
 #toggle:checked ~ .navbar {
-    display: none!important;
+    display: none;
 }
 /*#toggle:not(:checked) ~ .ds {
     position: absolute!important;
