@@ -12,6 +12,11 @@ body{
 @media screen and (max-width: 768px) {
     .mobilenav{
         display: block!important;
+        z-index: 1;
+    }
+    .navbar{
+        position: fixed!important;
+        z-index: 1;
     }
     .fila{
         flex-direction: column!important;
