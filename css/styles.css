@@ -27,8 +27,13 @@ body{
         padding: 0px 15px!important;
         margin-bottom: 150px!important;
     }
-    .fila .imgSobreMi img{
+    .fila .imgSobreMi{
         width: 100%!important;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .fila .imgSobreMi img{
+        width: 40%!important;
     }
     .fila .dialogSobreMi{
         width: auto!important;
@@ -36,16 +41,15 @@ body{
     .fila .parrafoSobreMi{
         width: 100%!important; 
         padding: 0px!important;
+        margin-bottom: 20px;
     }
     .fila .habilidades{
         width: 100%!important;
         padding: 0px!important;
     }
-    .servicios .contenedor .fila{
-        width: 100%!important;
-    }
     .card{
         margin: 15px 0px!important;
+        width: -webkit-fill-available;
     }
 }
 .logo{
