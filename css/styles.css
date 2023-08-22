@@ -10,9 +10,6 @@ body{
     flex-direction: row;
 }
 @media screen and (max-width: 768px) {
-    .navbar{
-        display: none;
-    }
     .fila{
         flex-direction: column!important;
         padding: 0px!important;
@@ -57,6 +54,27 @@ body{
     color: white;
     font-weight: 700;
 }
+#toggle {
+    display: none;
+  }
+#toggle:checked ~ .navbar {
+    display: none!important;
+}
+/*#toggle:not(:checked) ~ .ds {
+    position: absolute!important;
+}*/
+.relative{
+    position: absolute!important;
+}
+.mobilenav{
+    position: fixed;
+    font-size: 30px;
+    top: 15px;
+    left: 15px;
+}
+.mobilenav i:hover{
+    font-weight: 900;
+}
 .active{
     color: #FB2576!important; 
     transition: all 0.3s ease-in-out;
@@ -98,7 +116,6 @@ body{
     display: flex;
     flex-direction: column;
     background-color: #f9f9ff;
-
 }
 .inicio{
     height: 100vh;

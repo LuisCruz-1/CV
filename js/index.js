@@ -27,3 +27,13 @@ function navHighlighter() {
     }
   });
 }
+function myFunction() {
+  var element = document.querySelector('.mobilenav');
+  var checkbox = document.querySelector('#toggle');
+  
+  if (checkbox.checked) {
+    element.classList.remove('relative');
+  } else {
+    element.classList.add('relative');
+  }
+}
